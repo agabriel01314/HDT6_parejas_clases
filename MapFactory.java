@@ -1,3 +1,8 @@
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
 public class MapFactory {
 
     public static Map<String, Estudiante> obtenerMap(int opcion) {
