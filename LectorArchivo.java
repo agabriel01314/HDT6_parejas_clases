@@ -1,3 +1,11 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class LectorArchivo {
 
     private final String rutaArchivo;
@@ -22,10 +30,22 @@ public class LectorArchivo {
     }
 
     private Estudiante obtenerEstudianteDeLinea(String linea) {
+        return null;
         // Implementar la lógica para obtener un objeto Estudiante a partir de una línea del archivo.
     }
 
     public Map<String, Estudiante> getEstudiantes() {
         return estudiantes;
     }
+    public static Map<String, List<Estudiante>> guardarPorNacionalidad(Map<String, Estudiante> estudiantes) {
+    Map<String, List<Estudiante>> estudiantesPorNacionalidad = new HashMap<>();
+    for (Estudiante estudiante : estudiantes.values()) {
+        String nacionalidad = estudiante.getNacionalidad();
+        List<Estudiante> estudiantesLista = estudiantesPorNacionalidad.getOrDefault(nacionalidad, new ArrayList<>());
+        estudiantesLista.add(estudiante);
+        estudiantesPorNacionalidad.put(nacionalidad, estudiantesLista);
+    }
+    return estudiantesPorNacionalidad;
+}
+
 }

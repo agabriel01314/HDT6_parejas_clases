@@ -13,5 +13,14 @@ public class Estudiante {
         this.carrera = carrera;
     }
 
-    // Getters y setters
+    public String getCodigo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCodigo'");
+    }
+
+    public String getNacionalidad() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getNacionalidad'");
+    }
+
 }
